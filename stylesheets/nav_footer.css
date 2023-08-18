@@ -4,10 +4,14 @@
 nav .logo .pularNavegacao {}
 
 /* Caixa do Logotipo + Botão de compartilhamento */
-/* nav .logo img,
-nav .nav-link  {
-  background-color: red;
-} */
+
+nav .logo img{
+  background-color: #9D3B1F;
+}
+nav .nav-link, nav .nav-link:hover, nav .nav-link:focus{
+  background-color: #9D3B1F;
+  color: #fff;
+}
 
 /* Botão de compartilhamento */
 nav .nav-link {}
@@ -17,21 +21,22 @@ nav .nav-link[aria-expanded="true"] {}
 
 /* FOOTER */
 /* Cores de fonte + contornos */
-/* footer, footer .sharing i {
-  color: red;
+ footer, footer .sharing i {
+  background-color: #9D3B1F;
+  color: #fff;
 }
 footer .cred-rea>div:not(:first-child) {
-  border-left-color: red;
+  border-left-color: #fff;
 }
 footer .aval-rea .btn-secondary {
-  border-color: red;
+  border-color: #fff;
 }
 @media (max-width: 1199.98px) {
   footer .sharing i {
-    background-color: red;
+    background-color: #9D3B1F;
     color:  white;
   }
-} */
+} 
 footer .aval-rea .btn-secondary:hover,
 footer .aval-rea .btn-secondary:focus {}
 
