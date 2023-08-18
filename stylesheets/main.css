@@ -1,3 +1,69 @@
 body {
   background-color: #FFF;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+main{
+  padding-bottom: 0;
+}
+
+.bg-area{
+  position: relative;
+  margin-top: -100px;
+  z-index: -99;
+}
+
+.bg-area > img{
+  width: 100%;
+}
+
+.titulo-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.titulo-container > img{
+  width: 35%;
+}
+
+.titulo-container > img:nth-child(2){
+  width: 3%;
+  margin-top: 50px;
+}
+
+.texto-inicial-container{
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.texto-inicial-container > p{
+  text-align: center;
+  font-size: 16px;
+  width: 65%;
+}
+
+.button-inicio-container{
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.button-inicio-container > button{
+  border: 3px solid #9D3B1F;
+  outline: none;
+  background-color: #FBF3F1;
+  text-transform: uppercase;
+  padding: 15px;
+  width: 300px;
+  font-weight: bold;
+  font-size: 18px;
+  color: #9D3B1F;
+  cursor: pointer;
+}
+.button-inicio-container > button:hover{
+  background-color: #9D3B1F;
+  color: #fff;
+  transition: ease .2s;
 }

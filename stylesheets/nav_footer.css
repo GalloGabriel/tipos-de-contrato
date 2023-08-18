@@ -22,7 +22,7 @@ nav .nav-link[aria-expanded="true"] {}
 /* FOOTER */
 /* Cores de fonte + contornos */
  footer, footer .sharing i {
-  background-color: #9D3B1F;
+  background-color: #D1704A;
   color: #fff;
 }
 footer .cred-rea>div:not(:first-child) {
@@ -33,7 +33,7 @@ footer .aval-rea .btn-secondary {
 }
 @media (max-width: 1199.98px) {
   footer .sharing i {
-    background-color: #9D3B1F;
+    background-color: #D1704A;
     color:  white;
   }
 } 
