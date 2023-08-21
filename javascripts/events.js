@@ -18,5 +18,12 @@ $(document).ready(function(){
   //////////////////////////////////////////////////////////////////
 
   // Seu código abaixo
+    $('#startTeste').click(function(){
+      $('.questoes-container').css('display', 'flex');
+      $('.texto-inicial-container').css('display', 'none');
+      $('.button-inicio-container').css('display', 'none');
+      $('#iconeEstrela').css('position', 'relative');
+      $('#iconeEstrela').css('top', '15px');
+    })
 
 })

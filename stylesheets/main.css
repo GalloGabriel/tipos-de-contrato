@@ -50,7 +50,7 @@ main{
   margin-top: 50px;
 }
 
-.button-inicio-container > button{
+.botao-padrao{
   border: 3px solid #9D3B1F;
   outline: none;
   background-color: #FBF3F1;
@@ -62,8 +62,120 @@ main{
   color: #9D3B1F;
   cursor: pointer;
 }
-.button-inicio-container > button:hover{
+.botao-padrao:hover{
   background-color: #9D3B1F;
   color: #fff;
   transition: ease .2s;
+}
+
+
+.div-extension{
+  background-color: #D1704A;
+  width: 100%;
+  height: 40px;
+}
+
+
+
+/* CARD QUESTÕES */
+.questoes-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.questoes-infos > p{
+  color: #000;
+}
+
+.card-questoes{
+  width: 1000px;
+  height: 600px;
+  background-color: #FBDBCD;
+  box-shadow: 9px 7px 1px #9D3B1F;
+  display: flex;
+  align-items: center;
+  padding: 0 70px;
+  gap: 70px;
+}
+
+.button-controler{
+  position: relative;
+  bottom: 30px;
+  border: 4px solid #9D3B1F!important;
+}
+
+.img-status{
+  width: 270px;
+  margin-top: 10px;
+}
+
+/* QUESTÔES */
+
+.numero-questao{
+  margin-top: -50px;
+  margin-bottom: 35px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.numero-questao > img{
+  width: 7%;
+}
+
+.indicador-questao{
+  font-size: 26px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #9D3B1F;
+}
+
+.alternativas-container{
+  margin-top: 50px;
+}
+
+.each-alternativa{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 25px;
+}
+
+.num-alternativa{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FBDBCD;
+  color: #000000;
+  padding: 15px;
+  border: 2px solid #000000;
+  border-radius: 10px;
+  width: 40px;
+  height: 40px;
+}
+
+.alternativa{
+  width: 420px;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 10px;
+  color: #000;
+  box-shadow: 2px 3px 2px rgba(0,0,0,.5);
+  padding: 8px 0 8px 25px;
+  cursor: pointer;
+}
+
+.texto-alternativa{
+  cursor: pointer;
+}
+
+.ilustra-questao > img{
+  width: 300px;
+}
+
+.isHidden{
+  display: none;
 }

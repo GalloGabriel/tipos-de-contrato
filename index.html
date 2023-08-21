@@ -101,7 +101,7 @@
 
       <div class="titulo-container">
         <img src="/assets/titulo.svg" alt="">
-        <img src="/assets/icone-estrela.svg" alt="">      
+        <img id="iconeEstrela" src="/assets/icone-estrela.svg" alt="">      
       </div>
 
       <div class="texto-inicial-container">
@@ -109,7 +109,61 @@
       </div>
 
       <div class="button-inicio-container">
-        <button>Iniciar o teste</button>
+        <button class="botao-padrao" id="startTeste">Iniciar o teste</button>
+      </div>
+
+      <!-- CARD QUESTÕES AREA -->
+      <div class="questoes-container">
+
+        <div class="card-questoes">
+
+          <div class="questoes-infos">
+            <div class="numero-questao">
+              <img src="/assets/icone-questao.svg" alt="">
+              <span class="indicador-questao">Questão 1</span>
+            </div>
+
+            <p>O princípio da liberdade das partes garante a máxima liberdade contratual para os contratantes. Assim, os contratantes podem e têm direito a decidir de maneira livre sobre quais são os seus interesses que se farão presentes nas cláusulas; é claro, desde que esteja conforme o disposto na legislação em vigor. Este princípio está relacionado a qual(is)tipo(s) de contrato?</p>
+
+            <div class="alternativas-container">
+
+              <div class="each-alternativa">
+                <div class="num-alternativa">1</div>
+                <div class="alternativa">
+                  <input type="radio" class="isHidden" name="alternativas">
+                  <label class="texto-alternativa" for="">Contrato de compra e venda</label>
+                </div>
+              </div>
+
+              <div class="each-alternativa">
+                <div class="num-alternativa">2</div>
+                <div class="alternativa">
+                  <input type="radio" class="isHidden" name="alternativas">
+                  <label class="texto-alternativa" for="">Contrato de locação</label>
+                </div>
+              </div>
+
+              <div class="each-alternativa">
+                <div class="num-alternativa">3</div>
+                <div class="alternativa">
+                  <input type="radio" class="isHidden" name="alternativas">
+                  <label class="texto-alternativa" for="">Todos os tipos de contrato</label>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="ilustra-questao">
+            <img src="/assets/ilustra-questao-1.png" alt="">
+          </div>
+
+        </div>
+
+        <button class="botao-padrao button-controler">continuar</button>
+
+        <img class="img-status" src="/assets/status-0.svg" alt="">
+
       </div>
 
     </div>
@@ -117,6 +171,8 @@
     <div class="bg-area">
       <img src="/assets/bg-desktop.png" alt="">
     </div>
+
+    <div class="div-extension"></div>
   </main>
 
   <!-- RODAPÉ -->
