@@ -7,6 +7,7 @@ let allQuestoes = [
     "questaoFeitaCorreta": "false",
     "ilustraQuestao": `${BASE_URL}/ilustra-questao-1.png`,
     "statusQuestao": `${BASE_URL}/status-0.svg`,
+    "numQuestao": "1",
 
     "numeros": [
       {"alternativaId": 1},
@@ -44,6 +45,7 @@ let allQuestoes = [
     "questaoFeitaCorreta": "false",
     "ilustraQuestao": `${BASE_URL}/ilustra-questao-2.png`,
     "statusQuestao": `${BASE_URL}/status-1.svg`,
+    "numQuestao": "2",
 
     "numeros": [
       {"alternativaId": 1},
@@ -81,6 +83,7 @@ let allQuestoes = [
     "questaoFeitaCorreta": "false",
     "ilustraQuestao": `${BASE_URL}/ilustra-questao-3.png`,
     "statusQuestao": `${BASE_URL}/status-2.svg`,
+    "numQuestao": "3",
 
     "numeros": [
       {"alternativaId": 1},
@@ -118,6 +121,7 @@ let allQuestoes = [
     "questaoFeitaCorreta": "false",
     "ilustraQuestao": `${BASE_URL}/ilustra-questao-4.png`,
     "statusQuestao": `${BASE_URL}/status-3.svg`,
+    "numQuestao": "4",
 
     "numeros": [
       {"alternativaId": 1},
@@ -155,6 +159,7 @@ let allQuestoes = [
     "questaoFeitaCorreta": "false",
     "ilustraQuestao": `${BASE_URL}/ilustra-questao-5.png`,
     "statusQuestao": `${BASE_URL}/status-4.svg`,
+    "numQuestao": "5",
 
     "numeros": [
       {"alternativaId": 1},
@@ -192,6 +197,7 @@ let allQuestoes = [
     "questaoFeitaCorreta": "false",
     "ilustraQuestao": `${BASE_URL}/ilustra-questao-6.png`,
     "statusQuestao": `${BASE_URL}/status-5.svg`,
+    "numQuestao": "6",
 
     "numeros": [
       {"alternativaId": 1},
@@ -229,6 +235,7 @@ let allQuestoes = [
     "questaoFeitaCorreta": "false",
     "ilustraQuestao": `${BASE_URL}/ilustra-questao-7.png`,
     "statusQuestao": `${BASE_URL}/status-6.svg`,
+    "numQuestao": "7",
 
     "numeros": [
       {"alternativaId": 1},
@@ -266,6 +273,7 @@ let allQuestoes = [
     "questaoFeitaCorreta": "false",
     "ilustraQuestao": `${BASE_URL}/ilustra-questao-8.png`,
     "statusQuestao": `${BASE_URL}/status-7.svg`,
+    "numQuestao": "8",
 
     "numeros": [
       {"alternativaId": 1},
@@ -303,6 +311,7 @@ let allQuestoes = [
     "questaoFeitaCorreta": "false",
     "ilustraQuestao": `${BASE_URL}/ilustra-questao-9.png`,
     "statusQuestao": `${BASE_URL}/status-8.svg`,
+    "numQuestao": "9",
 
     "numeros": [
       {"alternativaId": 1},
@@ -340,6 +349,7 @@ let allQuestoes = [
     "questaoFeitaCorreta": "false",
     "ilustraQuestao": `${BASE_URL}/ilustra-questao-10.png`,
     "statusQuestao": `${BASE_URL}/status-9.svg`,
+    "numQuestao": "10",
 
     "numeros": [
       {"alternativaId": 1},
