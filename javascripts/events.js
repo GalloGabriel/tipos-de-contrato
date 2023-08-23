@@ -46,7 +46,7 @@ $(document).ready(function(){
       
       numAlternativa++
       
-      let alternativasContent = criaAlternativas(questoesStorage[0].numeros[numAlternativa - 1].alternativaId, alternativas.questaoText);
+      let alternativasContent = criaAlternativas(questoesStorage[0].numeros[numAlternativa - 1].alternativaId, alternativas.questaoText, alternativas.questaoCorreta);
 
       questoesInfoContainer.appendChild(alternativasContent);
   
@@ -62,7 +62,10 @@ $(document).ready(function(){
     let divAlternativa = document.querySelectorAll(".each-alternativa");
     let textoEnunciado = document.querySelector(".texto-enunciado");
     let numeroDaQuestao = document.querySelector(".indicador-questao");
-    let textALternativa = document.querySelectorAll(".texto-alternativa")
+    let textALternativa = document.querySelectorAll(".texto-alternativa");
+    let questoesCorretasStorage = localStorage.getItem(`questoesCorretasObjetos`);
+    let qtdeQuestoesCorretasStorage = parseInt(questoesCorretasStorage);
+    let questoesCorretas;
     let click = 0;
 
     const styleAlternativaSelecionada = `border: 1px solid #9D3B1F; background-color: #F6B597; transition: 0.4s; padding: 8px; border-radius: 10px; width: 100%;`;
@@ -104,6 +107,11 @@ $(document).ready(function(){
       })    
     }
 
+    //Questões corretas sempre inica com 0 quando o bloco é iniciado
+    if(!questoesCorretasStorage || questoesCorretasStorage){
+      questoesCorretas = 0; 
+    }
+
 
     function chamaProximaQuestao(){
       // Aimenta qtde de click
@@ -111,6 +119,14 @@ $(document).ready(function(){
 
       for (let i = 0; i < radioButtons.length; i++) {
         if(radioButtons[i].checked){
+
+          if(radioButtons[i].value === 'true'){
+            questoesCorretas++;
+            questoesStorage[click - 1].questaoFeitaCorreta = 'true';
+            
+          }else{
+            questoesStorage[click - 1].questaoFeitaCorreta = 'false';
+          }
 
           radioButtons[i].checked = false;
           arrDivQuestao[i].style = styleAlternativasNaoSelecionadas;
@@ -133,7 +149,7 @@ $(document).ready(function(){
         for(let i = 0; i < questoesStorage[click].alternativas.length; i++){
             textALternativa[i].innerHTML = questoesStorage[click].alternativas[i].questaoText;
             //numeroAlternativa[i].innerHTML = i+1;
-            //radioButtons[i].value = allQuestoes[click].alternativas[i].questaoCorreta;
+            radioButtons[i].value = questoesStorage[click].alternativas[i].questaoCorreta;
             //arrDivQuestao[i].dataset.value = allQuestoes[click].alternativas[i].questaoCorreta;
             //arrDivNumeros[i].dataset.check = allQuestoes[click].alternativas[i].questaoCorreta;
             //arrLabelsAlternativas[i].dataset.label = allQuestoes[click].alternativas[i].questaoCorreta;
@@ -142,7 +158,7 @@ $(document).ready(function(){
 
       // Quando objetos acabarem atualiza o localStorage de qtde de questoes certas e de questões (apenas com as respondidas erradas)
       if(click === questoesStorage.length){
-        //localStorage.setItem(`questoesCorretasBloco${currentBloco}`, questoesCorretas);
+        localStorage.setItem(`questoesCorretasObjetos`, questoesCorretas);
         //localStorage.setItem(`modifiedQuestoes${currentBloco}`, JSON.stringify(arrayModifiedQuestoes));
         //localStorage.setItem('buttonIdStorage', currentBloco);
         //localStorage.setItem(`blocoIniciado${currentBloco}`, true);

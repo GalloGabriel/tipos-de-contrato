@@ -30,7 +30,7 @@ let criaAlternativasContainer = function(){
   return alternativasContainer;
 }
 
-let criaAlternativas = function(numeroAlternativa, textoAlternativa){
+let criaAlternativas = function(numeroAlternativa, textoAlternativa, checkCorreta){
   let eachAlternativa = document.createElement("div");
   eachAlternativa.classList.add("each-alternativa");
 
@@ -44,6 +44,7 @@ let criaAlternativas = function(numeroAlternativa, textoAlternativa){
   let inputAlternativa = document.createElement("input");
   inputAlternativa.setAttribute("type", "radio");
   inputAlternativa.setAttribute("name", "alternativas");
+  inputAlternativa.setAttribute("value", `${checkCorreta}`)
   inputAlternativa.classList.add("isHidden");
 
   let textAlternativa = document.createElement("span");
