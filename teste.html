@@ -104,12 +104,62 @@
         <img id="iconeEstrela" src="https://apps.univesp.br/tipos-de-contrato/assets/icone-estrela.svg" alt="">      
       </div>
 
-      <div class="texto-inicial-container">
-        <p class="texto-inicial">Você, sem dúvidas, já fez um ou mais tipos de contrato ao longo da sua vida. Mas será que você <strong>sabe quais são os seus direitos ou o que deve conter um contrato?</strong> Analise as questões a seguir e selecione a opção mais adequada para cada caso. Vamos lá?</p>
-      </div>
+      <!-- CARD QUESTÕES AREA -->
+      <div class="questoes-container">
 
-      <div class="button-inicio-container">
-        <button class="botao-padrao" id="startTeste">Iniciar o teste</button>
+        <div class="card-questoes">
+
+          <div class="questoes-infos">
+            <!--
+            <div class="numero-questao">
+              <img src="/assets/icone-questao.svg" alt="">
+              <span class="indicador-questao">Questão 1</span>
+            </div>
+
+            <p>O princípio da liberdade das partes garante a máxima liberdade contratual para os contratantes. Assim, os contratantes podem e têm direito a decidir de maneira livre sobre quais são os seus interesses que se farão presentes nas cláusulas; é claro, desde que esteja conforme o disposto na legislação em vigor. Este princípio está relacionado a qual(is)tipo(s) de contrato?</p>
+
+            <div class="alternativas-container">
+
+              <div class="each-alternativa">
+                <div class="num-alternativa">1</div>
+                <div class="alternativa">
+                  <input type="radio" class="isHidden" name="alternativas">
+                  <label class="texto-alternativa" for="">Contrato de compra e venda</label>
+                </div>
+              </div>
+
+              <div class="each-alternativa">
+                <div class="num-alternativa">2</div>
+                <div class="alternativa">
+                  <input type="radio" class="isHidden" name="alternativas">
+                  <label class="texto-alternativa" for="">Contrato de locação</label>
+                </div>
+              </div>
+
+              <div class="each-alternativa">
+                <div class="num-alternativa">3</div>
+                <div class="alternativa">
+                  <input type="radio" class="isHidden" name="alternativas">
+                  <label class="texto-alternativa" for="">Todos os tipos de contrato</label>
+                </div>
+              </div>
+
+            </div>
+            -->
+          </div>
+
+          <div class="ilustra-questao">
+            
+          </div>
+
+        </div>
+
+        <button class="botao-padrao button-controler">continuar</button>
+
+        <div class="img-status-container">
+          
+        </div>
+
       </div>
 
     </div>
@@ -257,15 +307,12 @@
       showCount: false,
       shareIn: "popup",
     });
-
-
-    $('#startTeste').click(function(){
-      window.location.href = 'http://127.0.0.1:5500/teste.html';
-    })
   </script>
 
   <!-- Custom JS -->
-  
+  <script type="text/javascript" src="javascripts/events.js"></script>
+  <script type="text/javascript" src="data/questoes.js"></script>
+  <script type="text/javascript" src="components/questoes-comp.js"></script>
 
 
   <!-- MathJax. Descomente se for utilizar. Caso contrário, remova. -->

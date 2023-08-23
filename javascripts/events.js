@@ -103,7 +103,7 @@ $(document).ready(function(){
 
           radioButtons[i].checked = false;
           arrDivQuestao[i].style = styleAlternativasNaoSelecionadas;
-          
+
         }
         
       }
@@ -140,15 +140,5 @@ $(document).ready(function(){
 
     //Setters
     botaoAvancar.addEventListener('click', chamaProximaQuestao);
-
-
-
-    $('#startTeste').click(function(){
-      $('.questoes-container').css('display', 'flex');
-      $('.texto-inicial-container').css('display', 'none');
-      $('.button-inicio-container').css('display', 'none');
-      $('#iconeEstrela').css('position', 'relative');
-      $('#iconeEstrela').css('top', '15px');
-    })
 
 })
