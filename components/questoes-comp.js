@@ -17,6 +17,7 @@ let criaTitleQuestoes = function(numQuestao){
 
 let criaEnunciadoQuestao = function(enunciadoQuestao){
   let textoEnunciado = document.createElement("p");
+  textoEnunciado.classList.add('texto-enunciado');
   textoEnunciado.innerHTML = enunciadoQuestao;
 
   return textoEnunciado;
@@ -37,7 +38,7 @@ let criaAlternativas = function(numeroAlternativa, textoAlternativa){
   numAlternativa.classList.add("num-alternativa");
   numAlternativa.innerHTML = numeroAlternativa;
 
-  let alternativa = document.createElement("div");
+  let alternativa = document.createElement("label");
   alternativa.classList.add("alternativa");
 
   let inputAlternativa = document.createElement("input");
@@ -45,12 +46,12 @@ let criaAlternativas = function(numeroAlternativa, textoAlternativa){
   inputAlternativa.setAttribute("name", "alternativas");
   inputAlternativa.classList.add("isHidden");
 
-  let labelAlternativa = document.createElement("label");
-  labelAlternativa.classList.add("texto-alternativa");
-  labelAlternativa.innerHTML = textoAlternativa;
+  let textAlternativa = document.createElement("span");
+  textAlternativa.classList.add("texto-alternativa");
+  textAlternativa.innerHTML = textoAlternativa;
 
   alternativa.appendChild(inputAlternativa);
-  alternativa.appendChild(labelAlternativa);
+  alternativa.appendChild(textAlternativa);
 
   eachAlternativa.appendChild(numAlternativa);
   eachAlternativa.appendChild(alternativa);

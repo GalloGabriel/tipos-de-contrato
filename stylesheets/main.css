@@ -88,6 +88,7 @@ main{
 
 .questoes-infos > p{
   color: #000;
+  margin-bottom: 50px;
 }
 
 .card-questoes{
@@ -131,10 +132,6 @@ main{
   text-transform: uppercase;
   font-weight: bold;
   color: #9D3B1F;
-}
-
-.alternativas-container{
-  margin-top: 50px;
 }
 
 .each-alternativa{
