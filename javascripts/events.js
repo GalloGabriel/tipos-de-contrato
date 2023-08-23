@@ -23,27 +23,38 @@ $(document).ready(function(){
   //////////////////////////////////////////////////////////////////
 
   // Seu código abaixo
+
+    //Armazenando dados das questões no local Storage
+
+     localStorage.setItem(`questoesStorageContratos`, JSON.stringify(allQuestoes));
+     let inicioQuestoesStorage = localStorage.getItem(`questoesStorageContratos`);
+     let questoesStorage = JSON.parse(inicioQuestoesStorage);
+
+     //console.log(questoesStorage)
+
+
+
     //Printando na tela a primeira questão do Array
-    let headerQuestao = criaTitleQuestoes(allQuestoes[0].numQuestao);
-    let enunciado = criaEnunciadoQuestao(allQuestoes[0].titulo);
+    let headerQuestao = criaTitleQuestoes(questoesStorage[0].numQuestao);
+    let enunciado = criaEnunciadoQuestao(questoesStorage[0].titulo);
     questoesInfoContainer.appendChild(headerQuestao);
     questoesInfoContainer.appendChild(enunciado);
 
     let numAlternativa = 0;
 
-    allQuestoes[0].alternativas.sort((a,b) => a.ordem - b.ordem).map((alternativas)=>{    
+    questoesStorage[0].alternativas.sort((a,b) => a.ordem - b.ordem).map((alternativas)=>{    
       
       numAlternativa++
       
-      let alternativasContent = criaAlternativas(allQuestoes[0].numeros[numAlternativa - 1].alternativaId, alternativas.questaoText);
+      let alternativasContent = criaAlternativas(questoesStorage[0].numeros[numAlternativa - 1].alternativaId, alternativas.questaoText);
 
       questoesInfoContainer.appendChild(alternativasContent);
   
     });
 
     
-    ilustraQuestaoContainer.innerHTML = `<img src="${allQuestoes[0].ilustraQuestao}" alt="">`;
-    statusQuestaoContainer.innerHTML = `<img class="img-status" src="${allQuestoes[0].statusQuestao}" alt="">`
+    ilustraQuestaoContainer.innerHTML = `<img src="${questoesStorage[0].ilustraQuestao}" alt="">`;
+    statusQuestaoContainer.innerHTML = `<img class="img-status" src="${questoesStorage[0].statusQuestao}" alt="">`
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -109,18 +120,18 @@ $(document).ready(function(){
       }
 
       //Chama a proxima questão até os objetos acabarem
-      if(click < allQuestoes.length){
+      if(click < questoesStorage.length){
         embaralhaQuestao(click);
         
-        textoEnunciado.innerHTML = allQuestoes[click].titulo;
-        numeroDaQuestao.innerHTML = `Questão ${allQuestoes[click].numQuestao}`;
+        textoEnunciado.innerHTML = questoesStorage[click].titulo;
+        numeroDaQuestao.innerHTML = `Questão ${questoesStorage[click].numQuestao}`;
 
-        ilustraQuestaoContainer.innerHTML = `<img src="${allQuestoes[click].ilustraQuestao}" alt="">`;
-        statusQuestaoContainer.innerHTML = `<img class="img-status" src="${allQuestoes[click].statusQuestao}" alt="">`
+        ilustraQuestaoContainer.innerHTML = `<img src="${questoesStorage[click].ilustraQuestao}" alt="">`;
+        statusQuestaoContainer.innerHTML = `<img class="img-status" src="${questoesStorage[click].statusQuestao}" alt="">`
 
         
-        for(let i = 0; i < allQuestoes[click].alternativas.length; i++){
-            textALternativa[i].innerHTML = allQuestoes[click].alternativas[i].questaoText;
+        for(let i = 0; i < questoesStorage[click].alternativas.length; i++){
+            textALternativa[i].innerHTML = questoesStorage[click].alternativas[i].questaoText;
             //numeroAlternativa[i].innerHTML = i+1;
             //radioButtons[i].value = allQuestoes[click].alternativas[i].questaoCorreta;
             //arrDivQuestao[i].dataset.value = allQuestoes[click].alternativas[i].questaoCorreta;
@@ -130,7 +141,7 @@ $(document).ready(function(){
       }
 
       // Quando objetos acabarem atualiza o localStorage de qtde de questoes certas e de questões (apenas com as respondidas erradas)
-      if(click === allQuestoes.length){
+      if(click === questoesStorage.length){
         //localStorage.setItem(`questoesCorretasBloco${currentBloco}`, questoesCorretas);
         //localStorage.setItem(`modifiedQuestoes${currentBloco}`, JSON.stringify(arrayModifiedQuestoes));
         //localStorage.setItem('buttonIdStorage', currentBloco);
@@ -143,7 +154,7 @@ $(document).ready(function(){
 
 
     function embaralhaQuestao(n){
-      allQuestoes[n].alternativas.sort((a,b) => a.ordem - b.ordem);
+      questoesStorage[n].alternativas.sort((a,b) => a.ordem - b.ordem);
     }
 
     //Setters
