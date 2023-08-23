@@ -127,9 +127,17 @@ $(document).ready(function(){
             //arrDivNumeros[i].dataset.check = allQuestoes[click].alternativas[i].questaoCorreta;
             //arrLabelsAlternativas[i].dataset.label = allQuestoes[click].alternativas[i].questaoCorreta;
         }
-        
+      }
 
+      // Quando objetos acabarem atualiza o localStorage de qtde de questoes certas e de questões (apenas com as respondidas erradas)
+      if(click === allQuestoes.length){
+        //localStorage.setItem(`questoesCorretasBloco${currentBloco}`, questoesCorretas);
+        //localStorage.setItem(`modifiedQuestoes${currentBloco}`, JSON.stringify(arrayModifiedQuestoes));
+        //localStorage.setItem('buttonIdStorage', currentBloco);
+        //localStorage.setItem(`blocoIniciado${currentBloco}`, true);
 
+        /* Usar: https://apps.univesp.br/100-conceitos-contabilidade/pages/gabarito.html quando subir no servidor */
+        window.location.href = 'http://127.0.0.1:5500/resultado.html';
       }
     }
 

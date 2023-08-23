@@ -101,15 +101,34 @@
 
       <div class="titulo-container">
         <img src="https://apps.univesp.br/tipos-de-contrato/assets/titulo.svg" alt="">
-        <img src="https://apps.univesp.br/tipos-de-contrato/assets/icone-estrela.svg" alt="">      
+        <img id="iconeEstrela" src="https://apps.univesp.br/tipos-de-contrato/assets/icone-estrela.svg" alt="">      
       </div>
 
-      <div class="texto-inicial-container">
-        <p class="texto-inicial">Você, sem dúvidas, já fez um ou mais tipos de contrato ao longo da sua vida. Mas será que você <strong>sabe quais são os seus direitos ou o que deve conter um contrato?</strong> Analise as questões a seguir e selecione a opção mais adequada para cada caso. Vamos lá?</p>
-      </div>
+      <!-- CARD QUESTÕES AREA -->
+      <div class="questoes-container">
 
-      <div class="button-inicio-container">
-        <button class="botao-padrao" id="startTeste">Iniciar o teste</button>
+        <div class="card-questoes" style="flex-direction: column;" id="card-resultado">
+
+          <div class="resultado-container">
+
+            <img src="/assets/estrelas-01.svg" alt="">
+
+            <span class="texto-resultado">Você acertou 2 de 10 questões!</span>
+
+            <p class="detalhe-resultado">Você pode não ter começado tão bem, mas não desista. Que tal tentar responder as questões novamente?</p>
+
+            <button class="botao-padrao" id="refazerTeste">Refazer o teste</button>
+
+            <button class="botao-padrao">Gerar Gabarito</button>
+
+          </div>
+
+        </div>
+
+        <div class="img-status-container-resultado">
+          <img src="https://apps.univesp.br/tipos-de-contrato/assets/status-10.svg" alt="">
+        </div>
+
       </div>
 
     </div>
@@ -259,7 +278,7 @@
     });
 
 
-    $('#startTeste').click(function(){
+    $('#refazerTeste').click(function(){
       window.location.href = 'http://127.0.0.1:5500/teste.html';
     })
   </script>

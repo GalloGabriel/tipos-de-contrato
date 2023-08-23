@@ -32,6 +32,11 @@ main{
   margin-top: 50px;
 }
 
+#iconeEstrela{
+  position: relative;
+  top: 15px;
+}
+
 .texto-inicial-container{
   margin-top: 50px;
   display: flex;
@@ -66,6 +71,10 @@ main{
   background-color: #9D3B1F;
   color: #fff;
   transition: ease .2s;
+}
+.botao-padrao:focus{
+  outline: none;
+  border: 3px solid #9D3B1F;
 }
 
 
@@ -105,6 +114,13 @@ main{
   position: relative;
   bottom: 30px;
   border: 4px solid #9D3B1F!important;
+}
+
+.img-status-container-resultado{
+  margin-top: 40px;
+}
+.img-status-container-resultado > img{
+  width: 270px;
 }
 
 .img-status{
@@ -174,4 +190,37 @@ main{
 
 .isHidden{
   display: none;
+}
+
+
+/* RESULTADO STYLE */
+
+#card-resultado{
+  height: 580px;
+}
+
+.resultado-container{
+  display: flex;
+  flex-direction: column;
+  margin-top: 70px;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.resultado-container > img{
+  width: 50%;
+}
+
+.texto-resultado{
+  font-size: 24px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #9D3B1F;
+}
+
+.detalhe-resultado{
+  width: 450px;
+  text-align: center;
+  color: #000;
 }
