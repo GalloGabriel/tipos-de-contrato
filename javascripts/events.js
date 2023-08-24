@@ -193,17 +193,22 @@ $(document).ready(function(){
       
     }
     
-    /*
-    else if(currentQuestoes[0].questaoFeitaCorreta === 'false'){
-      textQuestaoCertaContainer.style.display = 'none';
-      numeroAlternativa.forEach(e=>{
-        e.style = `border: 2px solid #000`;
+    else if(currentQuestoes[click].questaoFeitaCorreta === 'false'){
+      //textQuestaoCertaContainer.style.display = 'none';
+
+      arrDivQuestao.map((item)=>{
+        item.style.pointerEvents = 'auto';
       });
+
       eachLabelAlternativa.forEach(e=>{
         e.style.backgroundColor = '#FFF';
       });
+
+      arrDivNumeros.map((item)=>{
+        item.style = `border: 2px solid #000`;
+      })
+      
     }
-    */
 
     //Questões corretas sempre inica com 0 quando o bloco é iniciado
     if(!questoesCorretasStorage || questoesCorretasStorage){
@@ -311,12 +316,69 @@ $(document).ready(function(){
           
           for(let i = 0; i < currentQuestoes[click].alternativas.length; i++){
               textALternativa[i].innerHTML = currentQuestoes[click].alternativas[i].questaoText;
-              //numeroAlternativa[i].innerHTML = i+1;
+              numeroDaAlternativa[i].innerHTML = i+1;
               radioButtons[i].value = currentQuestoes[click].alternativas[i].questaoCorreta;
-              //arrDivQuestao[i].dataset.value = allQuestoes[click].alternativas[i].questaoCorreta;
-              //arrDivNumeros[i].dataset.check = allQuestoes[click].alternativas[i].questaoCorreta;
-              //arrLabelsAlternativas[i].dataset.label = allQuestoes[click].alternativas[i].questaoCorreta;
+              arrDivQuestao[i].dataset.each = allQuestoes[click].alternativas[i].questaoCorreta;
+              arrDivNumeros[i].dataset.check = allQuestoes[click].alternativas[i].questaoCorreta;
+              arrLabelsAlternativas[i].dataset.label = allQuestoes[click].alternativas[i].questaoCorreta;
           }
+
+          //Verifica se usuário já acertou a questão atual. Se sim, seta checked do input para true e coloca estilo disabled nas alternativas
+          if(currentQuestoes[click].questaoFeitaCorreta === 'true'){
+            //textQuestaoCertaContainer.style.display = 'flex';
+            //botaoAvancarContainer.style.display = 'flex';
+            //botaoAvancar.style = buttonAvancarEnabledStyle;
+
+            arrLabelsAlternativas.map((item)=>{
+              if(item.dataset.label === 'true'){
+                item.style.backgroundColor = '#FFF';
+              }else{
+                item.style.backgroundColor = '#FFE8DE';
+              }
+            });
+            arrChecked.map((item)=>{
+              if(item.value === 'true'){
+                item.checked = true;
+              }
+            });
+            arrDivQuestao.map((item)=>{
+              item.style.pointerEvents = 'none';
+              if(item.dataset.each === 'true'){
+                item.style = styleAlternativaAcertada;
+                item.style.pointerEvents = 'none';
+              }
+            });
+            arrDivNumeros.map((item)=>{
+              if(item.dataset.check === 'true'){
+                item.innerHTML = `<img src="https://apps.univesp.br/tipos-de-contrato/assets/icone-acerto.svg" style="height: 33px">`;
+                item.style = `border: 0;`;
+                item.style.backgroundColor = '#C7D3C8';
+              }else{
+                item.style = `border: 2px solid #000`;
+                item.style.backgroundColor = '#FFF';
+              }
+            });
+            
+          }
+          
+          else if(currentQuestoes[click].questaoFeitaCorreta === 'false'){
+            //textQuestaoCertaContainer.style.display = 'none';
+
+            arrDivQuestao.map((item)=>{
+              item.style.pointerEvents = 'auto';
+            });
+
+            eachLabelAlternativa.forEach(e=>{
+              e.style.backgroundColor = '#FFF';
+            });
+
+            arrDivNumeros.map((item)=>{
+              item.style = `border: 2px solid #000`;
+            })
+            
+          }
+          
+
         }
 
         // Quando objetos acabarem atualiza o localStorage de qtde de questoes certas e de questões (apenas com as respondidas erradas)

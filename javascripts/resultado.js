@@ -10,6 +10,8 @@ const frase5 = 'Excelente! Parabéns! Você tem um ótimo conhecimento sobre con
 const estrelasResultado = document.querySelector("#estrelasResultado");
 const textoResultado = document.querySelector(".texto-resultado");
 const fraseResultado = document.querySelector(".detalhe-resultado");
+const botaoRefazerTeste = document.querySelector("#refazerTeste");
+const botaoReiniciarTeste = document.querySelector("#reiniciaTeste")
 
 // Puxando quantidade de questões acertadas do local storage
 const getQuestoesCorretas = localStorage.getItem('questoesCorretasObjetos');
@@ -21,7 +23,19 @@ let questoesCorretas = parseInt(questoesCorretasResultado);
 // Realizando renderização condicional
 
   // Texto - Titulo
-textoResultado.innerHTML = `Você acertou ${questoesCorretasResultado} de 10 questões!`;
+  if(questoesCorretas < 10){
+    botaoReiniciarTeste.style.display = 'none';
+    textoResultado.innerHTML = `Você acertou ${questoesCorretasResultado} de 10 questões!`;
+  }else if(questoesCorretas === 10){
+    botaoRefazerTeste.style.display = 'none';
+    textoResultado.innerHTML = `Você acertou todas as questões!`;
+  }
+
+  $('#reiniciaTeste').click(function(){
+    localStorage.removeItem('modifiedQuestoes');
+    window.location.href = 'http://127.0.0.1:5500/teste.html';
+  })
+
 
   // Estrelas
 if(questoesCorretas <= 3){
