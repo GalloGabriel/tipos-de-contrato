@@ -30,16 +30,19 @@ let criaAlternativasContainer = function(){
   return alternativasContainer;
 }
 
-let criaAlternativas = function(numeroAlternativa, textoAlternativa, checkCorreta){
+let criaAlternativas = function(numeroAlternativa, textoAlternativa, checkCorreta, dataLabel, dataEachAlternativa, checkNumAlternativa){
   let eachAlternativa = document.createElement("div");
   eachAlternativa.classList.add("each-alternativa");
+  eachAlternativa.setAttribute("data-each", dataEachAlternativa)
 
   let numAlternativa = document.createElement("div");
   numAlternativa.classList.add("num-alternativa");
   numAlternativa.innerHTML = numeroAlternativa;
+  numAlternativa.setAttribute("data-check", checkNumAlternativa)
 
   let alternativa = document.createElement("label");
   alternativa.classList.add("alternativa");
+  alternativa.setAttribute('data-label', dataLabel);
 
   let inputAlternativa = document.createElement("input");
   inputAlternativa.setAttribute("type", "radio");
