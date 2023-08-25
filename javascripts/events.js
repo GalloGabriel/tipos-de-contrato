@@ -318,10 +318,12 @@ $(document).ready(function(){
               textALternativa[i].innerHTML = currentQuestoes[click].alternativas[i].questaoText;
               numeroDaAlternativa[i].innerHTML = i+1;
               radioButtons[i].value = currentQuestoes[click].alternativas[i].questaoCorreta;
-              arrDivQuestao[i].dataset.each = allQuestoes[click].alternativas[i].questaoCorreta;
-              arrDivNumeros[i].dataset.check = allQuestoes[click].alternativas[i].questaoCorreta;
-              arrLabelsAlternativas[i].dataset.label = allQuestoes[click].alternativas[i].questaoCorreta;
+              arrDivQuestao[i].dataset.each = currentQuestoes[click].alternativas[i].questaoCorreta;
+              arrDivNumeros[i].dataset.check = currentQuestoes[click].alternativas[i].questaoCorreta;
+              arrLabelsAlternativas[i].dataset.label = currentQuestoes[click].alternativas[i].questaoCorreta;
           }
+
+          console.log(currentQuestoes[click].questaoFeitaCorreta)
 
           //Verifica se usuário já acertou a questão atual. Se sim, seta checked do input para true e coloca estilo disabled nas alternativas
           if(currentQuestoes[click].questaoFeitaCorreta === 'true'){
@@ -366,6 +368,7 @@ $(document).ready(function(){
 
             arrDivQuestao.map((item)=>{
               item.style.pointerEvents = 'auto';
+              item.style = styleAlternativasNaoSelecionadas
             });
 
             eachLabelAlternativa.forEach(e=>{
