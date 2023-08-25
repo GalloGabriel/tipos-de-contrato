@@ -391,7 +391,7 @@ $(document).ready(function(){
           //localStorage.setItem('buttonIdStorage', currentBloco);
           //localStorage.setItem(`blocoIniciado${currentBloco}`, true);
 
-          /* Usar: https://apps.univesp.br/100-conceitos-contabilidade/pages/gabarito.html quando subir no servidor */
+          /* Usar https://apps.univesp.br/tipos-de-contrato/resultado.html quando subir no servidor */
           window.location.href = 'http://127.0.0.1:5500/resultado.html';
         }
       }

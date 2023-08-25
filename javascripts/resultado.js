@@ -33,17 +33,19 @@ let questoesCorretas = parseInt(questoesCorretasResultado);
 
   $('#reiniciaTeste').click(function(){
     localStorage.removeItem('modifiedQuestoes');
+
+    // Usar https://apps.univesp.br/tipos-de-contrato/teste.html quando subir no servidor
     window.location.href = 'http://127.0.0.1:5500/teste.html';
   })
 
 
   // Estrelas
 if(questoesCorretas <= 3){
-  estrelasResultado.setAttribute('src', '/assets/estrelas-01.svg')
+  estrelasResultado.setAttribute('src', 'https://apps.univesp.br/tipos-de-contrato/assets/estrelas-01.svg')
 } else if(questoesCorretas > 3 && questoesCorretas <= 7){
-  estrelasResultado.setAttribute('src', '/assets/estrelas-02.svg')
+  estrelasResultado.setAttribute('src', 'https://apps.univesp.br/tipos-de-contrato/assets/estrelas-02.svg')
 } else if(questoesCorretas > 7 && questoesCorretas <= 10){
-  estrelasResultado.setAttribute('src', '/assets/estrelas-03.svg')
+  estrelasResultado.setAttribute('src', 'https://apps.univesp.br/tipos-de-contrato/assets/estrelas-03.svg')
 }
 
   // frase do Resultado
