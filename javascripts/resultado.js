@@ -35,7 +35,7 @@ let questoesCorretas = parseInt(questoesCorretasResultado);
     localStorage.removeItem('modifiedQuestoes');
 
     // Usar https://apps.univesp.br/tipos-de-contrato/teste.html quando subir no servidor
-    window.location.href = 'http://127.0.0.1:5500/teste.html';
+    window.location.href = 'https://apps.univesp.br/tipos-de-contrato/teste.html';
   })
 
 

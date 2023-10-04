@@ -107,8 +107,8 @@ $(document).ready(function(){
     let click = 0;
     let inputsChecked = [];
 
-    const styleAlternativaSelecionada = `border: 1px solid #9D3B1F; background-color: #F6B597; transition: 0.4s; padding: 8px; border-radius: 10px; width: 100%;`;
-    const styleAlternativaAcertada = `border: 1px solid #467255; background-color: #C7D3C8; transition: 0.4s; padding: 15px; border-radius: 10px; width: 98%;`;
+    const styleAlternativaSelecionada = `border: 1px solid #9D3B1F; background-color: #F6B597; padding: 8px; border-radius: 10px; width: 100%;`;
+    const styleAlternativaAcertada = `border: 1px solid #467255; background-color: #C7D3C8; padding: 15px; border-radius: 10px; width: 98%;`;
     const styleAlternativasNaoSelecionadas = `border-color: transparent; background-color: transparent; transition: none`;
 
 
@@ -131,20 +131,29 @@ $(document).ready(function(){
           switch(i){
             case 0:
               arrDivQuestao[0].style = styleAlternativaSelecionada;
+              arrDivNumeros[0].style.backgroundColor = "#FFF";
               arrDivQuestao[1].style = styleAlternativasNaoSelecionadas;
               arrDivQuestao[2].style = styleAlternativasNaoSelecionadas;
+              arrDivNumeros[1].style.backgroundColor = "#FBDBCD";
+              arrDivNumeros[2].style.backgroundColor = "#FBDBCD";
               break;
   
             case 1:
               arrDivQuestao[1].style = styleAlternativaSelecionada;
+              arrDivNumeros[1].style.backgroundColor = "#FFF";
               arrDivQuestao[0].style = styleAlternativasNaoSelecionadas;
               arrDivQuestao[2].style = styleAlternativasNaoSelecionadas;
+              arrDivNumeros[0].style.backgroundColor = "#FBDBCD";
+              arrDivNumeros[2].style.backgroundColor = "#FBDBCD";
               break;
   
             case 2:
               arrDivQuestao[2].style = styleAlternativaSelecionada;
+              arrDivNumeros[2].style.backgroundColor = "#FFF";
               arrDivQuestao[0].style = styleAlternativasNaoSelecionadas;
               arrDivQuestao[1].style = styleAlternativasNaoSelecionadas;
+              arrDivNumeros[0].style.backgroundColor = "#FBDBCD";
+              arrDivNumeros[1].style.backgroundColor = "#FBDBCD";
               break;
           }
           
@@ -392,7 +401,7 @@ $(document).ready(function(){
           //localStorage.setItem(`blocoIniciado${currentBloco}`, true);
 
           /* Usar https://apps.univesp.br/tipos-de-contrato/resultado.html quando subir no servidor */
-          window.location.href = 'http://127.0.0.1:5500/resultado.html';
+          window.location.href = 'https://apps.univesp.br/tipos-de-contrato/resultado.html';
         }
       }
     }

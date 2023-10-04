@@ -94,7 +94,7 @@
   </nav>
 
   <!-- Conteúdo -->
-  <main id="conteudoPrincipal">
+  <main id="conteudoPrincipal" class="mainInicio">
 
     <div class="container">
       <!-- Seu conteúdo -->
@@ -114,11 +114,11 @@
 
     </div>
 
-    <div class="bg-area">
-      <img src="https://apps.univesp.br/tipos-de-contrato/assets/bg-desktop.png" alt="">
+    <div class="bg-area-inicio">
+      <img id="bg-image" src="https://apps.univesp.br/tipos-de-contrato/assets/bg-desktop.png" alt="">
     </div>
 
-    <div class="div-extension"></div>
+    
   </main>
 
   <!-- RODAPÉ -->
@@ -202,21 +202,20 @@
           <p>Secretaria de Desenvolvimento Econômico</p>
 
           <h6>UNIVERSIDADE VIRTUAL DO ESTADO DE SÃO PAULO – UNIVESP</h6>
-          <p><span class="funcao">Presidente</span>Rodolfo Jardim de Azevedo</p>
+          <p><span class="funcao">Presidente</span>Marcos Augusto Borges</p>
           <p><span class="funcao">Diretora Acadêmica</span>Simone Telles Martins Ramos</p>
 
           <h6>Equipe</h6>
-          <p><span class="funcao">Docente responsável</span>Fulano de Tal</p>
-          <p><span class="funcao">Coordenação</span>Édison Trombeta</p>
-          <p><span class="funcao">Roteirização e Design Instrucional</span>Fulano de Tal, Ciclano de Tal</p>
-          <p><span class="funcao">Ilustração</span>Fulano de Tal, Ciclano de Tal</p>
-          <p><span class="funcao">Layout</span>Fulano de Tal, Ciclano de Tal</p>
-          <p><span class="funcao">Programação</span>Fulano de Tal, Ciclano de Tal</p>
-          <p><span class="funcao">Revisão</span>Fulano de Tal, Ciclano de Tal</p>
+          <p><span class="funcao">Docente responsável</span>Gabrieli Aparecida da Fonseca</p>
+          <p><span class="funcao">Coordenação</span>Wesley de Souza Lima</p>
+          <p><span class="funcao">Roteirização e Design Instrucional</span>Guilherme Vieira Barbosa, João Eduardo Andrade Pereira, João Raul Penariol Fernandes Gomes, Júlio Taliberti, Taysa Pacca Ferraz de Camargo, Nádia Rubio Pirillo</p>
+          <p><span class="funcao">Ilustração</span>Pedro Matheus</p>
+          <p><span class="funcao">Layout</span>Pedro Matheus</p>
+          <p><span class="funcao">Programação</span>Gabriel Henrique Gallo da Silva</p>
 
         </div>
         <div class="modal-footer">
-          <p>Janeiro/2020</p>
+          <p>Outubro/2023</p>
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
         </div>
       </div>
@@ -261,8 +260,15 @@
 
     $('#startTeste').click(function(){
       // Usar https://apps.univesp.br/tipos-de-contrato/teste.html quando subir no servidor
-      window.location.href = 'http://127.0.0.1:5500/teste.html';
-    })
+      window.location.href = 'https://apps.univesp.br/tipos-de-contrato/teste.html';
+    });
+
+    let bgImage = document.querySelector('#bg-image');
+    if (window.matchMedia("(max-width:992px)").matches){
+      bgImage.src = `https://apps.univesp.br/tipos-de-contrato/assets/bg-tablet.png`;
+    }else{
+      bgImage.src = `https://apps.univesp.br/tipos-de-contrato/assets/bg-desktop.png`;
+    }
   </script>
 
   <!-- Custom JS -->
