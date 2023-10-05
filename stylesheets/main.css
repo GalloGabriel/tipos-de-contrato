@@ -280,3 +280,81 @@ main{
     width: 620px;
   }
 }
+
+/* SMALL DEVICES STYLE */
+@media (min-width: 576px) and (max-width: 767px){
+  #titulo-teste, #titulo-resultado{
+    width: 280px;
+  }
+
+  .titulo-container{
+    margin-top: 30px;
+  }
+
+  .titulo-container > img {
+    width: 55%;
+  }
+
+  .titulo-container > img:nth-child(2){
+    width: 6%;
+  }
+
+  .numero-questao > img{
+    width: 7%;
+  }
+
+  .texto-inicial-container > p{
+    font-size: 16px;
+    width: 85%;
+  }
+
+  .bg-area, .bg-area-inicio, .ilustra-questao, .num-alternativa{
+    display: none;
+  }
+
+  .button-inicio-container{
+    margin-bottom: 70px;
+  }
+
+  .card-questoes{
+    width: auto;
+    height: 620px;
+    justify-content: center;
+  }
+
+  .questoes-infos > p{
+    font-size: 15px;
+  }
+
+  .numero-questao{
+    margin-top: -20px;
+  }
+
+  .indicador-questao{
+    font-size: 24px;
+  }
+
+  .img-status, .img-status-container-resultado > img{
+    width: 250px;
+  }
+
+  .img-status-container, .img-status-container-resultado{
+    margin-bottom: 50px;
+  }
+
+  #containerTesteMobile, #containerResultadoMobile{
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: 0;
+    margin-left: 0;
+    max-width: 100%;
+  }
+
+  .alternativa{
+    width: 95%;
+  }
+
+  .each-alternativa{
+    justify-content: center;
+  }
+}

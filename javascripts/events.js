@@ -230,6 +230,11 @@ $(document).ready(function(){
 
     function chamaProximaQuestao(evt){
 
+      // Joga a tela para o topo em telas menores
+      if (window.matchMedia("(max-width:767px)").matches){
+        window.scrollTo(0, 250);
+      }
+
       // Define inputsChecked como um Array vazio
       inputsChecked.splice([]);
 
