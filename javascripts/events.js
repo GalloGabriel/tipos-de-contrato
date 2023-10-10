@@ -64,10 +64,6 @@ $(document).ready(function(){
       currentQuestoes.push(item);
     
     });
-     
-
-     console.log(currentQuestoes)
-
 
 
     //Printando na tela a primeira questão do Array
@@ -336,8 +332,6 @@ $(document).ready(function(){
               arrDivNumeros[i].dataset.check = currentQuestoes[click].alternativas[i].questaoCorreta;
               arrLabelsAlternativas[i].dataset.label = currentQuestoes[click].alternativas[i].questaoCorreta;
           }
-
-          console.log(currentQuestoes[click].questaoFeitaCorreta)
 
           //Verifica se usuário já acertou a questão atual. Se sim, seta checked do input para true e coloca estilo disabled nas alternativas
           if(currentQuestoes[click].questaoFeitaCorreta === 'true'){

@@ -358,3 +358,222 @@ main{
     justify-content: center;
   }
 }
+
+/* MOBILE PHONES STYLE */
+@media (min-width: 375px) and (max-width: 575px){
+  #titulo-teste, #titulo-resultado{
+    width: 273px;
+  }
+
+  .titulo-container{
+    margin-top: 30px;
+  }
+
+  .titulo-container > img {
+    width: 70%;
+  }
+
+  .titulo-container > img:nth-child(2){
+    width: 10%;
+  }
+
+  #iconeEstrela{
+    top: 20px;
+  }
+
+  .numero-questao > img{
+    width: 7%;
+  }
+
+  .texto-inicial-container > p{
+    font-size: 16px;
+    width: 95%;
+  }
+
+  .botao-padrao{
+    width: 250px;
+    padding: 12px;
+  }
+
+  .bg-area, .bg-area-inicio, .ilustra-questao, .num-alternativa{
+    display: none;
+  }
+
+  .button-inicio-container{
+    margin-bottom: 70px;
+  }
+
+  .card-questoes{
+    width: auto;
+    height: auto;
+    justify-content: center;
+    padding: 85px 20px;
+  }
+
+  .questoes-infos > p{
+    font-size: 15px;
+  }
+
+  .numero-questao{
+    margin-top: -20px;
+  }
+
+  .indicador-questao{
+    font-size: 24px;
+  }
+
+  .img-status, .img-status-container-resultado > img{
+    width: 250px;
+  }
+
+  .img-status-container, .img-status-container-resultado{
+    margin-bottom: 50px;
+  }
+
+  #containerTesteMobile, #containerResultadoMobile{
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: 0;
+    margin-left: 0;
+    max-width: 100%;
+  }
+
+  .alternativa{
+    width: 90%;
+  }
+
+  .each-alternativa{
+    justify-content: center;
+  }
+
+  .texto-resultado{
+    width: 75%;
+    text-align: center;
+  }
+
+  .resultado-container{
+    margin-top: 5px;
+  }
+
+  .resultado-container > img{
+    width: 40%;
+  }
+
+  .detalhe-resultado{
+    width: 310px;
+  }
+
+  #card-resultado{
+    width: auto;
+    height: 560px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 374px){
+  .titulo-container > img{
+    width: 75%;
+  }
+
+  .titulo-container{
+    margin-top: 30px;
+  }
+
+  .titulo-container > img:nth-child(2){
+    width: 10%;
+  }
+
+  #titulo-teste, #titulo-resultado{
+    width: 220px;
+  }
+
+  #iconeEstrela{
+    top: 16px;
+  }
+
+  .alternativa{
+    width: 100%;
+  }
+
+  .numero-questao > img{
+    width: 7%;
+  }
+
+  .texto-inicial-container > p{
+    font-size: 16px;
+    width: 95%;
+  }
+
+  .botao-padrao{
+    width: 250px;
+    padding: 12px;
+  }
+
+  .bg-area, .bg-area-inicio, .ilustra-questao, .num-alternativa{
+    display: none;
+  }
+
+  .button-inicio-container{
+    margin-bottom: 70px;
+  }
+
+  .card-questoes{
+    width: auto;
+    height: auto;
+    justify-content: center;
+    padding: 70px 20px;
+  }
+
+  .questoes-infos > p{
+    font-size: 15px;
+  }
+
+  .numero-questao{
+    margin-top: -20px;
+  }
+
+  .indicador-questao{
+    font-size: 24px;
+  }
+
+  .img-status, .img-status-container-resultado > img{
+    width: 250px;
+  }
+
+  .img-status-container, .img-status-container-resultado{
+    margin-bottom: 50px;
+  }
+
+  #containerTesteMobile, #containerResultadoMobile{
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: 0;
+    margin-left: 0;
+    max-width: 100%;
+  }
+
+  .each-alternativa{
+    justify-content: center;
+  }
+
+  .texto-resultado{
+    width: 75%;
+    text-align: center;
+  }
+
+  .resultado-container{
+    margin-top: 5px;
+  }
+
+  .resultado-container > img{
+    width: 40%;
+  }
+
+  .detalhe-resultado{
+    width: 310px;
+  }
+
+  #card-resultado{
+    width: auto;
+    height: 560px;
+  }
+}
